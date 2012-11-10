@@ -12,5 +12,8 @@ Hook::Application.routes.draw do
   get '/contact' => 'static#contact'
   
   resources :users
+
+  get '/shots' => 'shots#index', :as => 'shots'
+  get '/projects' => 'projects#index', :as => 'projects'
   
 end
