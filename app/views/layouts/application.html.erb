@@ -7,22 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav>
-    <%= link_to "Home", root_url %> |
-	<%= link_to "About", about_url %> |
-    <% if session["user_id"] %>
-		<%= link_to "Profile", user_url(session[:user_id]) %> |
-	<% end %>
-    <%= link_to "Projects", projects_url %> |
-    <%= link_to "Shots", shots_url %> |
-    
-    <% if session["user_id"] %>
-      Hello, <%= User.find(session[:user_id]).first_name %>!
-      <%= link_to "Sign Out", "/logout" %>
-    <% else %>
-      <%= link_to "Sign In", "/login" %> 
-    <% end %>
-  </nav>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <ul class="nav">
+        <%= link_to "Home", root_url %> |
+    	<%= link_to "About", about_url %> |
+        <% if session["user_id"] %>
+			<%= link_to "Profile", user_url(session[:user_id]) %> |
+		<% end %>
+        <%= link_to "Projects", projects_url %> |
+        <%= link_to "Shots", shots_url %> |
+
+        <% if session["user_id"] %>
+          Hello, <%= User.find(session[:user_id]).first_name %>!
+          <%= link_to "Sign Out", "/logout" %>
+        <% else %>
+          <%= link_to "Sign In", "/login" %> 
+        <% end %>
+      </ul>
+    </div>
+  </div>    
   <%= yield %>
 
 </body>
