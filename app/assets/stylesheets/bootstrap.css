@@ -22,6 +22,7 @@ section {
 }
 
 .box-home{
+  max-width: 98%;
   margin-right: auto;
   margin-left: auto;
 }
