@@ -9,7 +9,7 @@ Hook::Application.routes.draw do
   get '/logout' => 'sessions#destroy'
   post 'sessions/create' => 'sessions#create'
   get '/home' => 'static#home'
-  get '/contact' => 'static#contact'
+  get '/about' => 'static#about'
   
   resources :users
 
