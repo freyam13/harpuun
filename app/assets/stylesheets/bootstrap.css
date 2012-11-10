@@ -21,6 +21,11 @@ section {
   display: block;
 }
 
+.box-home{
+  margin-right: auto;
+  margin-left: auto;
+}
+
 audio,
 canvas,
 video {
