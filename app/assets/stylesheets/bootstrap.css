@@ -87,6 +87,11 @@ img {
   max-width: none;
 }
 
+.logo-home{
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+
 button,
 input,
 select,
