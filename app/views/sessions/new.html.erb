@@ -1,0 +1,9 @@
+<%= form_tag "/sessions/create" do %>
+
+  <%= label_tag :email, "Enter Your Email Address:" %>
+  <%= text_field_tag :email %>
+  <%= label_tag :password, "Enter Your Secret Word:" %>
+  <%= password_field_tag :password %>
+  <%= submit_tag "Login"%>
+  
+<% end %>

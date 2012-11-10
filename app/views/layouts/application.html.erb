@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Harpuun</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <%= link_to "Home", root_url %> |
+	<%= link_to "Contact", contact_url %> |
+    <%= link_to "Users", users_url %> |
+    
+    <% if session["user_id"] %>
+      Hello, <%= User.find(session[:user_id]).first_name %>!
+      <%= link_to "Sign Out", "/logout" %>
+    <% else %>
+      <%= link_to "Sign In", "/login" %> 
+    <% end %>
+  </nav>
+  <%= yield %>
+
+</body>
+</html>
