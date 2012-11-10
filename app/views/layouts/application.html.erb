@@ -10,7 +10,7 @@
   <nav>
     <%= link_to "Home", root_url %> |
 	<%= link_to "Contact", contact_url %> |
-    <%= link_to "Users", users_url %> |
+    <%= link_to "Profile", users_url %> |
     
     <% if session["user_id"] %>
       Hello, <%= User.find(session[:user_id]).first_name %>!

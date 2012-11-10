@@ -1,9 +1,11 @@
 <%= form_tag "/sessions/create" do %>
-
+<p>
   <%= label_tag :email, "Enter Your Email Address:" %>
   <%= text_field_tag :email %>
   <%= label_tag :password, "Enter Your Secret Word:" %>
   <%= password_field_tag :password %>
   <%= submit_tag "Login"%>
-  
+</p>  
+<p>Not a member? <%= link_to "Click here to register", new_user_url %> 
+</p>
 <% end %>
