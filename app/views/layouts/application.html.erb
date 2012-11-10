@@ -9,7 +9,7 @@
 <body>
   <div class="navbar">
     <div class="navbar-inner">
-      <nav>
+      <ul class="nav">
         <%= link_to "Home", root_url %> |
     	<%= link_to "About", about_url %> |
         <%= link_to "Profile", users_url %> |
@@ -22,7 +22,7 @@
         <% else %>
           <%= link_to "Sign In", "/login" %> 
         <% end %>
-      </nav>
+      </ul>
     </div>
   </div>    
   <%= yield %>
