@@ -25,6 +25,7 @@ section {
   max-width: 98%;
   margin-right: auto;
   margin-left: auto;
+  text-align: center;
 }
 
 audio,
@@ -84,6 +85,11 @@ img {
 #map_canvas img,
 .google-maps img {
   max-width: none;
+}
+
+.logo-home{
+  margin-top: 5%;
+  margin-bottom: 3%;
 }
 
 button,
