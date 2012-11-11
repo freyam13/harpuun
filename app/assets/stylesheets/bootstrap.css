@@ -93,6 +93,10 @@ img {
   margin-left: 8%;
 }
 
+.logo-nav{
+  width: 200px;
+}
+
 button,
 input,
 select,
@@ -4169,7 +4173,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .nav > .disabled > a {
-  color: #999999;
+  color: #8EB5C6;
 }
 
 .nav > .disabled > a:hover {
@@ -4235,7 +4239,7 @@ input[type="submit"].btn.btn-mini {
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
-  color: #777777;
+  color: #8EB5C6;
   text-shadow: 0 1px 0 #ffffff;
 }
 
@@ -4249,11 +4253,11 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar-link {
-  color: #777777;
+  color: #8EB5C6;
 }
 
 .navbar-link:hover {
-  color: #333333;
+  color: #8EB5C6;
 }
 
 .navbar .divider-vertical {
@@ -4425,7 +4429,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > li > a {
   float: none;
   padding: 10px 15px 10px;
-  color: #777777;
+  color: #8EB5C6;
   text-decoration: none;
   text-shadow: 0 1px 0 #ffffff;
 }
@@ -4436,7 +4440,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
-  color: #333333;
+  color: white;
   text-decoration: none;
   background-color: transparent;
 }
