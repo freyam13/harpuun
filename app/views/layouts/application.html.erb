@@ -11,7 +11,7 @@
     <div class="navbar-inner">
       <ul class="nav">
 
-        <li><a href="#"><img class="logo-nav" src="/assets/harpuunlogo.png"/><%= link_to "Home", root_url %></a></li>
+		<li><%= link_to( image_tag("/assets/harpuunlogo.png", :width => "200"), root_url, ) %></li>
 
         <li><a href="#about"><%= link_to "About", about_url %></a></li>
         <% if session["user_id"] %>
@@ -21,13 +21,18 @@
         <li><a href="#shots"><%= link_to "Shots", shots_url %></a></li>
 
         <% if session["user_id"] %>
-        <li>Hello, <%= User.find(session[:user_id]).first_name %>!<a href="#"><%= link_to "Sign Out", "/logout" %></a></li>
+        <li class="greeting">Hello, <%= User.find(session[:user_id]).first_name %>!</li><li><a href="#"><%= link_to "Sign Out", "/logout" %></a></li>
         <% else %>
         <li><a href="#"><%= link_to "Sign In", "/login" %> </a></li>
         <% end %>
       </ul>
     </div>
   </div>    
+
+  <% if flash[:notice] %>
+    <p><%= flash[:notice] %></p>
+  <% end %>
+
   <%= yield %>
 
 </body>

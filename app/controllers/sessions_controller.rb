@@ -12,10 +12,10 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to users_url(params[:id])
+      redirect_to user_url(session[:user_id]), :notice => "You're signed in!"
     else
-      # redirect_to root_url, :notice => "Nice try!"
-      render 'new'
+      redirect_to sign_in_url, :notice => "Invalid email address or password"      
+      # render 'new'
     end
   end
 end
