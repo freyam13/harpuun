@@ -11,7 +11,12 @@
     <div class="navbar-inner">
       <ul class="nav">
 
+<<<<<<< HEAD
 		<li><%= link_to( image_tag("/assets/harpuunlogo.png", :width => "200"), root_url, ) %></li>
+=======
+        <li><img class="logo-nav" src="/assets/harpuunlogo.png" alt="Harpuun logo - Home"/></li>
+        <li><a href="Home"><%= link_to "Home", root_url %></a></li>
+>>>>>>> more fun with css
 
         <li><a href="#about"><%= link_to "About", about_url %></a></li>
         <% if session["user_id"] %>
@@ -21,7 +26,11 @@
         <li><a href="#shots"><%= link_to "Shots", shots_url %></a></li>
 
         <% if session["user_id"] %>
+<<<<<<< HEAD
         <li class="greeting">Hello, <%= User.find(session[:user_id]).first_name %>!</li><li><a href="#"><%= link_to "Sign Out", "/logout" %></a></li>
+=======
+        <li><p class="nav-unlinked">Hello, <%= User.find(session[:user_id]).first_name %>!</p><a href="#"><%= link_to "Sign Out", "/logout" %></a></li>
+>>>>>>> more fun with css
         <% else %>
         <li><a href="#"><%= link_to "Sign In", "/login" %> </a></li>
         <% end %>

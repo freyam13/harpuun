@@ -28,6 +28,15 @@ section {
   text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+.main-indent{
+  max-width: 98%;
+  margin-left: 2%;
+}
+
+
+>>>>>>> more fun with css
 audio,
 canvas,
 video {
@@ -95,6 +104,11 @@ img {
 
 .logo-nav{
   width: 200px;
+<<<<<<< HEAD
+=======
+  margin-top: 10px;
+  margin-bottom: 10px;
+>>>>>>> more fun with css
 }
 
 button,
@@ -610,6 +624,13 @@ p {
   font-size: 21px;
   font-weight: 200;
   line-height: 30px;
+}
+
+.nav-unlinked {
+  padding-top: 12%;
+  margin-left: 5%;
+  float: left;
+  font-weight: 700;
 }
 
 small {
@@ -4427,8 +4448,13 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar .nav > li > a {
+<<<<<<< HEAD
   float: none;
   padding: 10px 15px 10px;
+=======
+  float: left;
+  padding: 20px 8px 5px;
+>>>>>>> more fun with css
   color: #8EB5C6;
   text-decoration: none;
 /*  text-shadow: 0 1px 0 #ffffff;
