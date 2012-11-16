@@ -1,4 +1,13 @@
 class UsersController < ApplicationController
+  
+  before_filter :ensure_correct_user, :except => [:new, :create]
+  
+  def ensure_correct_user
+    if session[:user_id] != params[:id].to_i
+      redirect_to root_url
+    end
+  end
+  
   # GET /users
   # GET /users.json
   def index
@@ -44,6 +53,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        session[:user_id] = @user.id
+        
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
