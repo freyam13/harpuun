@@ -1,10 +1,19 @@
 class UsersController < ApplicationController
   
-  before_filter :ensure_correct_user, :except => [:new, :create]
-  
-  def ensure_correct_user
-    if session[:user_id] != params[:id].to_i
-      redirect_to root_url
+  before_filter :ensure_correct_user, :except => [:new, :create, :index]
+    
+    def ensure_correct_user
+      if session[:user_id] != params[:id].to_i
+        redirect_to root_url
+      end
+    end
+    
+  before_filter :require_admin, :only => [:index]
+    
+  def require_admin
+    user = User.find_by_id(session[:user_id])
+    if !user.present? || !user.admin
+      redirect_to root_url, :notice => 'Must be admin.'
     end
   end
   
