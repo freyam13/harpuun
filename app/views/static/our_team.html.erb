@@ -28,12 +28,12 @@
 		<div class="form">
 		<h2>Contact Us</h2>
 		<%= form_tag "/sessions/create" do %>
-		  <%= label_tag :email, "Name:" %>
+		  <%= label_tag :name, "Name:" %>
+		  <%= text_field_tag :name %>
+		  <%= label_tag :email, "Email:" %>
 		  <%= text_field_tag :email %>
-		  <%= label_tag :password, "Email:" %>
-		  <%= text_field_tag :password %>
-		  <%= label_tag :password, "Message:" %>
-		  <%= text_area_tag :password, nil, :rows => 13 %></br>
+		  <%= label_tag :mesage, "Message:" %>
+		  <%= text_area_tag :message, nil, :rows => 13 %></br>
 		  <%= submit_tag "Submit"%>
 		<% end %>
 		</div>
