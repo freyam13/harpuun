@@ -4,9 +4,12 @@ Hook::Application.routes.draw do
    
   get '/login' => 'sessions#new', :as => 'sign_in'
   get '/logout' => 'sessions#destroy'
+  
   post 'sessions/create' => 'sessions#create'
+  
   get '/home' => 'static#home'
-  get '/about' => 'static#about'
+  get '/how_it_works' => 'static#how_it_works'
+  get '/our_team' => 'static#our_team'
   
   resources :users
   resources :projects
