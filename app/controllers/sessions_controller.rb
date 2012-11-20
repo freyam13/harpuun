@@ -14,8 +14,8 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to user_url(session[:user_id])
     else
-      redirect_to sign_in_url, :notice => "Invalid email address or password"      
-      # render 'new'
+      flash[:notice] = "Invalid email address or password"
+      render 'new'
     end
   end
 end
