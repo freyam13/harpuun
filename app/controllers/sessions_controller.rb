@@ -1,11 +1,6 @@
 class SessionsController < ApplicationController
-  def new
-    
-  end
   
-  def destroy
-    session[:user_id] = nil
-    redirect_to root_url
+  def new  
   end
   
   def create
@@ -18,4 +13,10 @@ class SessionsController < ApplicationController
       render 'new'
     end
   end
+  
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_url
+  end
+  
 end
