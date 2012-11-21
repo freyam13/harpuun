@@ -20,4 +20,8 @@ Hook::Application.routes.draw do
   
   get "users/:id", :controller => "users", :action =>"show"
   
+  
+  # Routes for mockups
+  get "/mockups/contractor_signup" => 'mockups#contractor_signup'
+  
 end
